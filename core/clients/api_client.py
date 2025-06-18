@@ -68,7 +68,7 @@ class APIClient:
 
     def get_booking_by_id(self, booking_id):
         with allure.step("Return booking by id"):
-            url = f"{self.base_url}{Endpoints.BOOKING_ENDPOINT}{booking_id}"
+            url = f"{self.base_url}{Endpoints.BOOKING_ENDPOINT}/{booking_id}"
             response = self.session.get(url, headers=self.session.headers)
             response.raise_for_status()
         with allure.step("Assert status code"):
