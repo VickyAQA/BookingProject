@@ -2,6 +2,8 @@ from core.clients.api_client import APIClient
 import pytest
 from datetime import datetime, timedelta
 from faker import Faker
+
+
 @pytest.fixture(scope="session")
 def api_client():
     client = APIClient()
