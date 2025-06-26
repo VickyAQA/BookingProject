@@ -37,8 +37,8 @@ def test_create_booking_with_custom_data(api_client):
 
 
 @allure.feature('Test creating booking')
-@allure.story('Positive: creating booking with random data')
-def test_create_booking_with_random_data(api_client, booking_dates):
+@allure.story('Positive: creating booking with random date')
+def test_create_booking_with_random_date(api_client, booking_dates):
         checkin_date = datetime.now() + timedelta(days=random.randint(1, 30))
         checkout_date = checkin_date + timedelta(days=random.randint(1, 30))
 
@@ -171,7 +171,7 @@ def test_create_booking_invalid_firstname_type(api_client):
         with pytest.raises(requests.exceptions.HTTPError) as excinfo:
             api_client.create_booking(booking_data)
 
-    # typit github
+
 
 
 
