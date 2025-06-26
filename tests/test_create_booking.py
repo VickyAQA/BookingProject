@@ -172,24 +172,7 @@ def test_create_booking_invalid_firstname_type(api_client):
             api_client.create_booking(booking_data)
 
 
-@allure.feature('Test creating booking')
-@allure.story('Negative: Invalid firstname type (integer)')
-def test_create_booking_invalid_firstname_type(api_client):
-    booking_data = {
-        "firstname": 123,
-        "lastname": "Pavlovich",
-        "totalprice": 166,
-        "depositpaid": True,
-        "bookingdates": {
-            "checkin": "2025-06-06",
-            "checkout": "2025-06-16"
-        },
-        "additionalneeds": "Dinner"
-    }
 
-    with allure.step("Calling create_booking with invalid firstname type"):
-        with pytest.raises(requests.exceptions.HTTPError) as excinfo:
-            api_client.create_booking(booking_data)
 
 
 
