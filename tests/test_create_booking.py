@@ -171,7 +171,7 @@ def test_create_booking_invalid_firstname_type(api_client):
         with pytest.raises(requests.exceptions.HTTPError) as excinfo:
             api_client.create_booking(booking_data)
 
-    # typit github
+    # typit github2
 
 
 
